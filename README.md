@@ -71,7 +71,7 @@ The application is made from multiple components, including:
 
 ![Chat screen](docs/chat-screenshot.png)
 
-[📺 Watch a video overview of the app](https://youtu.be/FIouJNn1uaU)
+[📺 Watch a video overview of the app](https://youtu.be/FIouJNn1uaU?si=TQD5J2BwpqhLKNXr)
 
 ## Getting started
 
