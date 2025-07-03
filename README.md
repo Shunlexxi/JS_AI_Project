@@ -2,6 +2,9 @@
 
 ## Table of Contents
 
+- [Welcome](#welcome)
+- []()
+- []()
 - [Features](#features)
 - [Getting started](#getting-started)
 - [Azure account requirements](#azure-account-prerequisites)
