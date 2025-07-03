@@ -3,8 +3,10 @@
 ## Table of Contents
 
 - [Welcome](#welcome)
-- []()
-- []()
+- [Problem Statement](#problem-statement)
+- [Solution](#solution)
+- [Repository & Demo](#repository-&-demo)
+- [Architecture](#architecture)
 - [Features](#features)
 - [Getting started](#getting-started)
 - [Azure account requirements](#azure-account-prerequisites)
