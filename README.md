@@ -1,4 +1,4 @@
-# ChatGPT + Enterprise data with Azure OpenAI and Azure AI Search
+# JS AI Build-a-thon Project
 
 ## Table of Contents
 
@@ -33,14 +33,28 @@
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=684521881&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 [![Open in Remote - Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-javascript)
 
-This sample demonstrates a few approaches for creating ChatGPT-like experiences over your own data using the Retrieval Augmented Generation pattern. It uses Azure OpenAI Service to access the ChatGPT model (gpt-4o-mini), and Azure AI Search for data indexing and retrieval.
+## 🚀 Welcome
 
+## 🌍 Problem Statement
+We’ve all experienced the frustration of searching endlessly for the right information—only to feel even more overwhelmed and lost. Whether it’s navigating through numerous documents or waiting on delayed responses, getting timely support can often be a challenging and exhausting process.
+
+This challenge is common everywhere, as Student Ambassadors, who frequently require quick and reliable information to effectively carry out our roles. Spending valuable time digging through scattered resources not only slows us down but also takes away from what truly matters: engaging our peers and making a meaningful impact. (force for good!)
+
+## 🛠️ Solution
+That's where this solution comes in. I've built an Intelligent Chatbot (Question-and-Answer) app designed specifically for Student Ambassadors (or students who want to get in)
+
+This solution leverages the power of [Microsoft azd templates](https://azure.github.io/ai-app-templates/?tags=javascript&tags=typescript) - a collection of application code (samples) and azd configuration files that can be used to quickly customize and deploy production-ready applications to Azure.  It ensures that finding help and information is as seamless and efficient as possible. With this solution, Student Ambassadors can get instant answers to their questions, access relevant resources, and navigate their responsibilities with confidence —all within a single, user-friendly interface.
+[Here](https://azure.github.io/ai-app-templates/repo/azure-samples/azure-search-openai-javascript/) is the particular template used.
+
+## 🚀 Repository & Demo
+- GitHub repo: [link here](https://github.com/Shunlexxi/JS_AI_Project)
+- Live demo: [link here](https://youtu.be/FIouJNn1uaU)
+- Study Jam: MLSA Nigeria
+
+## 🧩Architecture 
 ![Retrieval Augmented Generation Architecture](docs/rag-architecture.png)
 
-The repo includes sample data so it's ready to try end to end. In this sample application we use a fictitious company called Contoso Real Estate, and the experience allows its customers to ask support questions about the usage of its products. The sample data includes a set of documents that describe its terms of service, privacy policy and a support guide.
-
 The application is made from multiple components, including:
-
 - **Search service**: the backend service that provides the search and retrieval capabilities.
 - **Indexer service**: the service that indexes the data and creates the search indexes.
 - **Web app**: the frontend web application that provides the user interface and orchestrates the interaction between the user and the backend services.
@@ -57,7 +71,7 @@ The application is made from multiple components, including:
 
 ![Chat screen](docs/chat-screenshot.png)
 
-[📺 Watch a video overview of the app](https://youtu.be/uckVTuS36H0)
+[📺 Watch a video overview of the app](https://youtu.be/FIouJNn1uaU)
 
 ## Getting started
 
