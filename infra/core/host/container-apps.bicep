@@ -21,9 +21,23 @@ module containerAppsEnvironment 'container-apps-environment.bicep' = {
   }
 }
 
-module containerRegistry 'container-registry.bicep' = {
-  name: '${name}-container-registry'
-  scope: !empty(containerRegistryResourceGroupName) ? resourceGroup(containerRegistryResourceGroupName) : resourceGroup()
+
+// Deploy to a custom resource group if specified
+module containerRegistryCustom 'container-registry.bicep' = if (!empty(containerRegistryResourceGroupName)) {
+  name: '${name}-container-registry-custom'
+  scope: resourceGroup(containerRegistryResourceGroupName)
+  params: {
+    name: containerRegistryName
+    location: location
+    adminUserEnabled: containerRegistryAdminUserEnabled
+    tags: tags
+  }
+}
+
+// Deploy to the current resource group if no custom group is specified
+module containerRegistryDefault 'container-registry.bicep' = if (empty(containerRegistryResourceGroupName)) {
+  name: '${name}-container-registry-default'
+  scope: resourceGroup()
   params: {
     name: containerRegistryName
     location: location
@@ -36,5 +50,5 @@ output defaultDomain string = containerAppsEnvironment.outputs.defaultDomain
 output environmentName string = containerAppsEnvironment.outputs.name
 output environmentId string = containerAppsEnvironment.outputs.id
 
-output registryLoginServer string = containerRegistry.outputs.loginServer
-output registryName string = containerRegistry.outputs.name
+output registryLoginServer string = !empty(containerRegistryResourceGroupName) ? containerRegistryCustom.outputs.loginServer : containerRegistryDefault.outputs.loginServer
+output registryName string = !empty(containerRegistryResourceGroupName) ? containerRegistryCustom.outputs.name : containerRegistryDefault.outputs.name
